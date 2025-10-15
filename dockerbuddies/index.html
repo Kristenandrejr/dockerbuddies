@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DockerBuddies</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f7fb; margin: 40px;">
+    <h1 style="color: #1e3a8a;">🐳 DockerBuddies</h1>
+    <p>This simple guide introduces Docker in a beginner-friendly way using <b>Python</b> and <b>HTML</b>.</p>
+
+    <h2>1. What is Docker?</h2>
+    <p>
+        Docker is a tool that helps developers package applications into containers — lightweight environments 
+        that include everything the app needs to run.
+    </p>
+
+    <h2>2. Common Docker Commands</h2>
+    <ul>
+        <li><code>docker pull hello-world</code> - Download a sample image</li>
+        <li><code>docker run hello-world</code> - Run a container from the image</li>
+        <li><code>docker ps</code> - List running containers</li>
+        <li><code>docker images</code> - View all downloaded images</li>
+    </ul>
+
+    <h2>3. Example Dockerfile</h2>
+    <pre style="background-color: #e8e8e8; padding: 10px; border-radius: 5px;">
+# Start from a lightweight Python image
+FROM python:3.9-slim
+
+# Set working directory
+WORKDIR /app
+
+# Copy files
+COPY . .
+
+# Install dependencies
+RUN pip install -r requirements.txt
+
+# Run the app
+CMD ["python", "app.py"]
+    </pre>
+
+    <h2>4. Python Demonstration (No Docker needed)</h2>
+    <p>
+        Run the following Python script to simulate Docker actions:
+    </p>
+    <pre style="background-color: #e8e8e8; padding: 10px; border-radius: 5px;">
+python docker_demo.py
+    </pre>
+
+    <p>Output example:</p>
+    <pre style="background-color: #e8e8e8; padding: 10px; border-radius: 5px;">
+🐳 Docker container starting...
+Installing dependencies...
+Running application inside container...
+Application started successfully!
+Stopping container...
+Container stopped.
+    </pre>
+
+    <hr>
+    <p style="color: gray; font-size: 14px;">Created by Christian Edeh — For I.T. practical submission</p>
+</body>
+</html>

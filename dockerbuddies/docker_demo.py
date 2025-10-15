@@ -3,7 +3,7 @@
 # Created by Christian Edeh
 
 def start_container():
-    print("🐳 Docker container starting...")
+    print("Docker container starting...")
     print("Installing dependencies...")
     print("Running application inside container...")
     print("Application started successfully!")
@@ -20,3 +20,4 @@ if __name__ == "__main__":
     print()
     stop_container()
     print("\nDemo completed successfully.")
+
